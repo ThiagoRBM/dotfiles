@@ -1,0 +1,30 @@
+[global_config]
+  title_transmit_bg_color = "#0c4b04"
+  title_inactive_bg_color = "#3a424a"
+[keybindings]
+  split_horiz = <Primary><Shift>h
+  split_vert = <Primary><Shift>v
+  copy = <Primary>c
+  paste = <Primary>v
+[profiles]
+  [[default]]
+    audible_bell = True
+    background_darkness = 0.95
+    background_type = transparent
+    cursor_shape = ibeam
+    cursor_color = "#ff7800"
+    cursor_color_fg = False
+    font = Source Code Pro for Powerline 10
+    foreground_color = "#09f3d7"
+    palette = "#241f31:#f42323:#1a5fb4:#c061cb:#ffffff:#aa00aa:#56ff00:#aaaaaa:#555555:#ff0000:#ff7800:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+    use_system_font = False
+    bold_is_bright = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
