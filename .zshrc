@@ -107,9 +107,30 @@ alias jupyterNotebook="source /home/thiagorbm/jupy/jup_notebook/bin/activate && 
 alias activ="source ./.venv/bin/activate" ## ativa venv na pasta atual
 alias expl="gio open ."  ## abre o explorador de arquivos na pasta atual
 
+# Funcao para criar diretorio e mover para dentro dele automaticamente
+mkcd()
+{
+    test -d "$1" || mkdir "$1" && cd "$1"
+}
 
 ## adicionando "time stamp"
 ## PROMPT='%{$fg[yellow]%}[%D{%f/%m/%y} %D{%L:%M:%S}] '$PROMPT formato de am/pm
 RPROMPT="[%D{%f/%m/%y} | %D{%T}]"
 
 export PATH="$HOME/.poetry/bin:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/thiagorbm/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/thiagorbm/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/thiagorbm/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/thiagorbm/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
